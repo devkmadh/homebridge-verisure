@@ -31,8 +31,10 @@ Please protect you installation from unauthorised access:
 
 ## Requirements
 
-* Node.js 18 or later
-* Homebridge 1.8 or later (also compatible with Homebridge 2.0)
+* Node.js 18 or later (Node.js 20+ recommended for [Homebridge 2.0](https://github.com/homebridge/homebridge/wiki/Updating-To-Homebridge-v2.0))
+* Homebridge 1.8 or later, including Homebridge 2.0
+
+This plugin is compatible with Homebridge 2.0. See the [Homebridge 2.0 update guide](https://github.com/homebridge/homebridge/wiki/Updating-To-Homebridge-v2.0) for general upgrade notes (mDNS advertiser changes, child bridges, etc.).
 
 ## Installation
 

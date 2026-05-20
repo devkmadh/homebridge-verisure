@@ -2,10 +2,11 @@
 
 ### Plugin & accessories
 
-* Add support for Homebridge 2.0 alongside continued support for Homebridge 1.8+. The `engines.homebridge` range is now `^1.8.0 || ^2.0.0-beta.0` (the `-beta.0` suffix lets npm semver match the in-progress 2.0 beta releases as well as the final 2.0.0 release).
-* Migrate all accessories from the deprecated `EventEmitter`-style `.on('get', cb)` / `.on('set', cb)` characteristic handlers to the `onGet` / `onSet` async API required by HAP-NodeJS 1.x.
+* Add support for Homebridge 2.0 alongside continued support for Homebridge 1.8+. The `engines.homebridge` range is now `^1.8.0 || ^2.0.0`.
+* Migrate all accessories from the deprecated `EventEmitter`-style `.on('get', cb)` / `.on('set', cb)` characteristic handlers to the `onGet` / `onSet` async API required by [HAP-NodeJS 1.x](https://github.com/homebridge/homebridge/wiki/Updating-To-Homebridge-v2.0#hap-nodejs-v1).
 * Replace `setCharacteristic` with `updateCharacteristic` when reflecting state back to HAP, to avoid re-triggering set handlers.
 * Rewrite the polling loop to call each registered getter and push the result via `updateValue`, since `Characteristic#getValue()` was removed in HAP-NodeJS 1.x.
+* Fix door lock target state getting stuck after HomeKit commands by adopting the `targetLockState = 'NONE'` pattern from [PR #161](https://github.com/ptz0n/homebridge-verisure/pull/161); polling now also syncs `LockTargetState` when idle.
 
 ### Breaking
 
