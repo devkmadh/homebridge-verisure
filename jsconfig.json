@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleDetection": "legacy",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "maxNodeModuleJsDepth": 0,
+    "baseUrl": ".",
+    "paths": {
+      "verisure": ["types/verisure.d.ts"]
+    }
+  },
+  "include": [
+    "index.js",
+    "lib/**/*.js",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "**/*.test.js",
+    "lib/jest.setup.js",
+    "bin"
+  ]
+}

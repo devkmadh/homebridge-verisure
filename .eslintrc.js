@@ -4,6 +4,9 @@ module.exports = {
   env: {
     'jest/globals': true,
   },
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
   rules: {
     'comma-dangle': ['error', {
       arrays: 'always-multiline',
