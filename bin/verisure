@@ -48,8 +48,7 @@ const run = async () => {
   }, null, 2));
 };
 
-try {
-  run();
-} catch (error) {
-  console.log(error.message);
-}
+run().catch((error) => {
+  console.error(error.message);
+  process.exit(1);
+});
